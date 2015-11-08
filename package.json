@@ -43,7 +43,7 @@
     "radium": "^0.14.3",
     "react": "~0.14.2",
     "react-dom": "~0.14.2",
-    "react-router": "~1.0.0",
+    "react-router": "1.0.0-rc4",
     "superagent": "~1.4.0",
     "validator": "~4.2.1"
   },
