@@ -4,12 +4,10 @@ node_js:
 sudo: required
 dist: trusty
 addons:
-    firefox: "41.0"
+    firefox: "42.0"
 cache:
     directories:
         - node_modules
-before_install:
-    - gem install sass
 before_script:
     - export DISPLAY=:99.0
     # - Xvfb :99 -ac -screen 0 1280x1024x16 &
