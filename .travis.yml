@@ -10,6 +10,10 @@ cache:
         - node_modules
 notifications:
   slack: exchangeworld:8hBOT17abdMs80vasq0d4KNP
+before_install:
+    - export TZ=Asia/Taipei
+    # - npm install webpack eslint eslint-plugin-react babel-eslint -g
+    - npm install -g webpack 
 before_script:
     - export DISPLAY=:99.0
     # - Xvfb :99 -ac -screen 0 1280x1024x16 &
@@ -19,10 +23,6 @@ before_script:
     - npm start
 
 script:
-#     # - eslint --ext .jsx src
-#     # - eslint --ext .js src
+    # - eslint --ext .jsx src
+    # - eslint --ext .js src
     - npm test
-# after_success:
-#     - echo '!!! 開始佈署 !!!'
-#     #########
-#     - echo '!!! 成功佈署 !!!'

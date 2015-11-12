@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js",
     "lint": "eslint src",
-    "test": "nightwatch"
+    "test": "node_modules/.bin/nightwatch"
   },
   "ignore": [
     "**/.*",
