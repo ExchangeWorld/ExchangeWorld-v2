@@ -21,7 +21,7 @@ before_script:
 script:
 #     # - eslint --ext .jsx src
 #     # - eslint --ext .js src
-    # - npm test
+    - npm test
 # after_success:
 #     - echo '!!! 開始佈署 !!!'
 #     #########
