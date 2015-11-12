@@ -8,6 +8,8 @@ addons:
 cache:
     directories:
         - node_modules
+notifications:
+  slack: exchangeworld:8hBOT17abdMs80vasq0d4KNP
 before_script:
     - export DISPLAY=:99.0
     # - Xvfb :99 -ac -screen 0 1280x1024x16 &
@@ -19,7 +21,7 @@ before_script:
 script:
 #     # - eslint --ext .jsx src
 #     # - eslint --ext .js src
-    - npm test
+    # - npm test
 # after_success:
 #     - echo '!!! 開始佈署 !!!'
 #     #########
