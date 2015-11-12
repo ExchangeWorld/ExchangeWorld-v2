@@ -5,7 +5,6 @@ const pathToReactDOM = path.resolve(nodeModules, 'react/lib/ReactDOM');
 
 const deps = [
   'react/dist/react.min.js',
-  'react-router/umd/reactRouter.min.js',
 ];
 
 const config = {
