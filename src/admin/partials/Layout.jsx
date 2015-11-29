@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router';
+import { Topbar, CollapsibleNav, Nav, NavItem } from 'amazeui-react';
+ 
 export default class Layout extends React.Component {
 	
 	constructor(props, context) {
@@ -8,10 +10,15 @@ export default class Layout extends React.Component {
 
 	render() {
 		return (
-			<div>
-				Admin
-				{this.props.children}
-			</div>
+			<Topbar brand="Amaze UI" toggleNavKey="nav">
+				<CollapsibleNav eventKey="nav">
+					<Nav topbar>
+						<NavItem active href="http://www.amazeui.org">首页</NavItem>
+						<NavItem href="http://www.amazeui.org">开始使用</NavItem>
+						<NavItem href="http://www.amazeui.org">按需定制</NavItem>
+					</Nav>
+				</CollapsibleNav>
+			</Topbar>
 		);
 	}
 }

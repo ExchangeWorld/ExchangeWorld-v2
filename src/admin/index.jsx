@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute} from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import Layout from './partials/Layout.jsx';
+import './styles/base.css';
 
 class Admin extends React.Component {
 	

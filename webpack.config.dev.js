@@ -34,17 +34,28 @@ const config = {
 		new webpack.NoErrorsPlugin(),
 	],
 	module: {
-		loaders: [{
-			test: /\.(js|jsx)$/,
-			loaders: ['babel'],
-			include: path.join(__dirname, 'src'),
-			exclude: path.join(__dirname, 'node_modules'),
-		}, {
-			test: /\.css$/,
-			loader: "style-loader!css-loader",
-			include: path.join(__dirname, 'src'),
-			exclude: path.join(__dirname, 'node_modules'),
-		}],
+		loaders: [
+			{
+				test: /\.(js|jsx)$/,
+				loaders: ['babel'],
+				include: path.join(__dirname, 'src'),
+				exclude: path.join(__dirname, 'node_modules'),
+			}, 
+			{
+				test: /\.css$/,
+				loader: "style-loader!css-loader",
+				include: path.join(__dirname, 'src'),
+				exclude: path.join(__dirname, 'node_modules'),
+			}, 
+			{ 
+				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				loader: "url-loader?limit=10000&mimetype=application/font-woff" 
+			},
+			{ 
+				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				loader: "file-loader" 
+			}
+		],
 		noParse: [],
 	}
 };
