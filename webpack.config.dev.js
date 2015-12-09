@@ -1,14 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 const nodeModules = path.join(__dirname, 'node_modules');
-const pathToReactDOM = path.resolve(nodeModules, 'react/lib/ReactDOM');
+const pathToReactDOM = path.resolve(nodeModules, 'react-dom/dist/react-dom.min.js');
 
 const deps = [
   'react/dist/react.min.js',
 ];
 
 const config = {
-	devtool: 'eval',
+	devtool: 'source-map',
 	entry: {
 		app: [
 			'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
@@ -42,10 +42,9 @@ const config = {
 				exclude: path.join(__dirname, 'node_modules'),
 			}, 
 			{
-				test: /\.css$/,
-				loader: "style-loader!css-loader",
-				include: path.join(__dirname, 'src'),
-				exclude: path.join(__dirname, 'node_modules'),
+				test: /\.scss$/,
+				loader: "style-loader!css-loader!sass-loader!autoprefixer-loader?browsers=last 2 versions",
+				include: path.join(__dirname, 'style'),
 			}, 
 			{ 
 				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
