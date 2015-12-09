@@ -1,3 +1,5 @@
+@import "Constant";
+
 /*! Amaze UI v2.4.2 | by Amaze UI Team | (c) 2015 AllMobilize, Inc. | Licensed under MIT | 2015-07-06T10:25:45+0800 */
 /* ==========================================================================
    Component: Base
@@ -418,7 +420,7 @@ button {
   -moz-font-feature-settings: "liga", "kern";
 }
 /*Only phones */
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   /**
    * Break strings if their length exceeds the width of their container
    */
@@ -638,7 +640,7 @@ select {
 .am-container:after {
   clear: both;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -649,7 +651,7 @@ select {
   margin-left: -1rem;
   margin-right: -1rem;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-container > .am-g {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -677,7 +679,7 @@ select {
   margin-right: 0;
   width: auto;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-g .am-g {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -707,7 +709,7 @@ select {
 [class*="am-u-"] + [class*="am-u-"].am-u-end {
   float: left;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   [class*="am-u-"] {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -888,7 +890,7 @@ select {
     float: left;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-u-md-1 {
     width: 8.33333333%;
   }
@@ -1057,7 +1059,7 @@ select {
     float: left;
   }
 }
-@media only screen and (min-width:1025px) {
+@media only screen and (min-width:$md + 1) {
   .am-u-lg-1 {
     width: 8.33333333%;
   }
@@ -1358,7 +1360,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-avg-md-1 > li {
     width: 100%;
   }
@@ -1468,7 +1470,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width:1025px) {
+@media only screen and (min-width:$md + 1) {
   .am-avg-lg-1 > li {
     width: 100%;
   }
@@ -2778,13 +2780,13 @@ fieldset[disabled] .am-checkbox-inline {
 .am-form-horizontal .am-form-group:after {
   clear: both;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-form-horizontal .am-form-label {
     text-align: right;
   }
 }
 /* Inline form elements */
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-form-inline .am-form-group {
     display: inline-block;
     margin-bottom: 0;
@@ -3105,7 +3107,7 @@ fieldset[disabled] .am-checkbox-inline {
 .am-topbar-brand {
   margin: 0;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-brand {
     float: left;
   }
@@ -3131,7 +3133,7 @@ fieldset[disabled] .am-checkbox-inline {
 .am-topbar-collapse.am-in {
   overflow-y: auto;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-collapse {
     margin-top: 0;
     padding: 0;
@@ -3160,12 +3162,12 @@ fieldset[disabled] .am-checkbox-inline {
   float: right;
   margin-right: 10px;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-toggle {
     display: none;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-nav {
     margin-bottom: 8px;
   }
@@ -3173,13 +3175,13 @@ fieldset[disabled] .am-checkbox-inline {
     float: none;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-nav > li + li {
     margin-left: 0;
     margin-top: 5px;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-nav {
     float: left;
   }
@@ -3228,14 +3230,14 @@ fieldset[disabled] .am-checkbox-inline {
     border-bottom-color: #0e90d2;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-collapse .am-dropdown.am-active .am-dropdown-content {
     float: none;
     position: relative;
     width: 100%;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-left {
     float: left;
   }
@@ -3244,12 +3246,12 @@ fieldset[disabled] .am-checkbox-inline {
     margin-right: 10px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-form .am-form-group {
     margin-bottom: 5px;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-topbar-form {
     padding: 0 10px;
     margin-top: 8px;
@@ -3261,7 +3263,7 @@ fieldset[disabled] .am-checkbox-inline {
 .am-topbar-btn {
   margin-top: 8px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-collapse .am-topbar-btn,
   .am-topbar-collapse .am-btn {
     display: block;
@@ -3339,7 +3341,7 @@ fieldset[disabled] .am-checkbox-inline {
 .am-with-topbar-fixed-bottom {
   padding-bottom: 51px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-topbar-fixed-bottom .am-topbar-collapse {
     position: absolute;
     bottom: 100%;
@@ -4087,7 +4089,7 @@ a.am-badge:focus {
   border-radius: 50%;
   border: 1px solid transparent;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-comment-avatar {
     width: 48px;
     height: 48px;
@@ -4123,7 +4125,7 @@ a.am-badge:focus {
   margin-left: 1px;
   z-index: 2;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-comment-main {
     margin-left: 63px;
   }
@@ -4199,7 +4201,7 @@ a.am-badge:focus {
   margin-left: auto;
   margin-right: 42px;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-comment-flip .am-comment-main {
     margin-right: 63px;
   }
@@ -4311,7 +4313,7 @@ a.am-badge:focus {
   margin: 1.6rem 0 0 0;
   list-style: none;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-comments-list-flip .am-comment-main {
     margin-right: 64px;
   }
@@ -7517,7 +7519,7 @@ img.am-thumbnail,
   }
 }
 /* medium displays */
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-hide-sm-only,
   .am-show-sm-up,
   .am-hide-sm,
@@ -7630,7 +7632,7 @@ img.am-thumbnail,
   }
 }
 /* large displays */
-@media only screen and (min-width:1025px) {
+@media only screen and (min-width:$md + 1) {
   .am-hide-sm-only,
   .am-show-sm-up,
   .am-hide-sm,
@@ -7890,7 +7892,7 @@ img.am-thumbnail,
     text-align: justify !important;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-sm-only-text-left {
     text-align: left !important;
   }
@@ -7904,7 +7906,7 @@ img.am-thumbnail,
     text-align: justify !important;
   }
 }
-@media only screen and (min-width:641px) and (max-width:1024px) {
+@media only screen and (min-width:$sm + 1) and (max-width:$md) {
   .am-md-only-text-left {
     text-align: left !important;
   }
@@ -7918,7 +7920,7 @@ img.am-thumbnail,
     text-align: justify !important;
   }
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-md-text-left {
     text-align: left !important;
   }
@@ -7932,7 +7934,7 @@ img.am-thumbnail,
     text-align: justify !important;
   }
 }
-@media only screen and (min-width:1025px) {
+@media only screen and (min-width:$md + 1) {
   .am-lg-text-left {
     text-align: left !important;
   }
@@ -8648,7 +8650,7 @@ ul.am-dropdown-content > .am-disabled > a:focus {
   -webkit-transform: translate3d(0, 0, 0) scale(0.815);
           transform: translate3d(0, 0, 0) scale(0.815);
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-modal {
     width: 540px;
     margin-left: -270px;
@@ -8875,9 +8877,9 @@ ul.am-dropdown-content > .am-disabled > a:focus {
     top: 50%;
     margin-left: -315px;
     margin-top: -315px;
-    -webkit-transform: translateY(1024px);
-        -ms-transform: translateY(1024px);
-            transform: translateY(1024px);
+    -webkit-transform: translateY($md);
+        -ms-transform: translateY($md);
+            transform: translateY($md);
   }
   .am-popup.am-modal-active {
     -webkit-transform: translateY(0);
@@ -8885,9 +8887,9 @@ ul.am-dropdown-content > .am-disabled > a:focus {
             transform: translateY(0);
   }
   .am-popup.am-modal-out {
-    -webkit-transform: translateY(1024px);
-        -ms-transform: translateY(1024px);
-            transform: translateY(1024px);
+    -webkit-transform: translateY($md);
+        -ms-transform: translateY($md);
+            transform: translateY($md);
   }
 }
 .am-popup-inner {
@@ -10496,7 +10498,7 @@ tbody.am-collapse.am-in {
   position: absolute;
   z-index: 1120;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-datepicker {
     width: 100%;
   }
@@ -11188,7 +11190,7 @@ tbody.am-collapse.am-in {
 .am-footer-default .am-footer-miscs p {
   margin: 5px 0;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-footer-default .am-footer-miscs p {
     display: inline-block;
     margin: 5px;
@@ -11239,7 +11241,7 @@ tbody.am-collapse.am-in {
   max-width: 100%;
   margin: 0 auto 2px auto;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-footer-one .am-footer-miscs p {
     display: inline-block;
     margin: 5px;
@@ -11884,7 +11886,7 @@ tbody.am-collapse.am-in {
   width: 100%;
   display: block;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-list-news-default .am-list-item-thumb-left .am-list-thumb,
   .am-list-news-default .am-list-item-thumb-right .am-list-thumb {
     max-height: 80px;
@@ -12132,7 +12134,7 @@ tbody.am-collapse.am-in {
   border-radius: 0;
   padding: 0;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $sm) {
   .am-list-news-one .am-list-item-thumb-left .am-list-thumb,
   .am-list-news-one .am-list-item-thumb-right .am-list-thumb {
     max-height: 80px;
@@ -12292,7 +12294,7 @@ tbody.am-collapse.am-in {
 .am-menu-default .am-menu-sub > li > a {
   color: #555555;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-menu-default .am-menu-nav li {
     width: auto;
     float: left;
@@ -12514,7 +12516,7 @@ tbody.am-collapse.am-in {
   color: #555555;
   line-height: 35px;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-menu-dropdown2 .am-menu-toggle {
     display: none !important;
   }
@@ -12646,7 +12648,7 @@ tbody.am-collapse.am-in {
 .am-menu-slide1 .am-menu-sub > li > a {
   color: #ffffff;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-menu-slide1 .am-menu-toggle {
     display: none !important;
   }
@@ -12857,7 +12859,7 @@ tbody.am-collapse.am-in {
   text-indent: 15px;
   padding: 0;
 }
-@media only screen and (min-width:641px) {
+@media only screen and (min-width:$sm + 1) {
   .am-menu-stack .am-menu-nav {
     background-color: #f5f5f5;
   }

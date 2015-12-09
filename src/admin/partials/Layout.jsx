@@ -1,14 +1,6 @@
 import React, { Component, PropTypes }  from 'react';
 import { Link } from 'react-router';
 import { Topbar, CollapsibleNav, Nav, NavItem } from 'amazeui-react';
-import { map } from 'lodash';
-
-const LINKS = {
-	'items': '物品管理',
-	'users': '使用者管理',
-	'exchange': '交易管理',
-	'exceptions' : '錯誤清單',
-};
 
 const styles = {
 	content: {
@@ -45,9 +37,9 @@ class Layout extends Component {
 	// constructor
 	constructor(props, context) {
 		super(props, context);
-		console.log(context);
+		// console.log(context);
 		this.state = {
-			title: LINKS[props.pathname] || '後台總覽',
+			title: 'EXWD 後台',
 			isNavOpen: false,
 		};
 		this.setTitle = this.setTitle.bind(this);
@@ -74,10 +66,6 @@ class Layout extends Component {
 		}
 	};
 
-	static getDrawerLinks() {
-		return LINKS;
-	}
-
 	// getChildContext
 	// componentWillMount
 	componentWillMount() {
@@ -101,7 +89,7 @@ class Layout extends Component {
 	// componentDidUpdate
 
 	// componentWillUnmount
-	componentWillUpdate(nextProps, nextState) {
+	componentWillUnmount() {
 		_instance = null;
 	}
 
@@ -110,7 +98,7 @@ class Layout extends Component {
 		this.refs.content.scrollTop = 0;
 	}
 
-	onClickLink(key) {
+	onClickLink() {
 		this.setState({
 			isNavOpen: false,
 		});
@@ -160,16 +148,14 @@ class Layout extends Component {
 	}
 
 	renderLeftNav() {
-		const navLinks = map(LINKS, (key, link) => {
-			const isActive = this.props.pathname === link;
-
+		const navLinks = this.props.navItems.map(nav => {
 			return (
-				<NavItem active={isActive} key={link}>
+				<NavItem active={this.props.pathname === nav.url} key={nav.url}>
 					<Link
-						to={'/admin/' + link}
-						onClick={this.onClickLink.bind(this, key)}
+						to={nav.url}
+						onClick={this.onClickLink.bind(this)}
 					>
-						{key}
+						{nav.text}
 					</Link>
 				</NavItem>
 			);
