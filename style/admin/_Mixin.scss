@@ -1,4 +1,4 @@
-@import "Constant"
+@import "Constant";
 
 @mixin element($element) {
   &__#{$element} {
@@ -14,21 +14,21 @@
 
 @mixin media($media) {
   @if $media == sm {
-    @media screen and (max-width: $small-screen) { @content; }
+    @media screen and (max-width: $sm) { @content; }
   }
   @else if $media == md {
-    @media screen and (min-width: $small-screen + 1) and (max-width: $medium-screen - 1) { 
+    @media screen and (min-width: $dm + 1) and (max-width: $md - 1) { 
     	@content; 
     }
   }
   @else if $media == lg {
-    @media screen and (min-width: $large-screen) { @content; }
+    @media screen and (min-width: $lg) { @content; }
   }
   @else if $media == less-md {
-    @media screen and (max-width: $medium-screen - 1) { @content; }
+    @media screen and (max-width: $md - 1) { @content; }
   }
-  @else if $media == greater-md {
-    @media screen and (min-width: $medium-screen) { @content; }
+  @else if $media == gt-md {
+    @media screen and (min-width: $md) { @content; }
   }
 }
 
