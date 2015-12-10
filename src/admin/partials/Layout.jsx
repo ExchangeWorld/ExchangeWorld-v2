@@ -92,19 +92,19 @@ class Layout extends Component {
 	renderTopbar() {
 		return (
 			<Topbar toggleNavKey="nav" fluid fixedTop>
-				<div className="am-topbar-brand brand">
+				<div className="am-topbar-brand">
 					<button
-						className="layout-sidenav--menu"
+						className="layout-sidenav__menu"
 						onClick={this.openNav.bind(this)}
 					>
 						<Icon icon="bars" />
 					</button>
-					<h3 className="topbar--brand">
+					<h3 className="topbar__brand">
 						{this.state.title}
 					</h3>
 				</div>
 				<CollapsibleNav eventKey="nav">
-					<Nav topbar className="header--nav__right">
+					<Nav topbar className="header__nav--right">
 						<NavItem>
 							<Link to="/admin">總覽</Link>
 						</NavItem>
@@ -131,8 +131,8 @@ class Layout extends Component {
 
 		const className = cx({
 			"layout-sidenav": true,
-			"layout-sidenav__open": this.state.isNavOpen,
-			"layout-sidenav__close": !this.state.isNavOpen,
+			"layout-sidenav--open": this.state.isNavOpen,
+			"layout-sidenav--close": !this.state.isNavOpen,
 		});
 
 		return (
@@ -145,7 +145,7 @@ class Layout extends Component {
 	//render
 	render() {
 
-		const maskClass = cx({"layout--mask": this.state.isNavOpen});
+		const maskClass = cx({"layout__mask": this.state.isNavOpen});
 
 		return (
 			<div>

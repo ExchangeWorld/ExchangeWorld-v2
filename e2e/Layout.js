@@ -7,9 +7,9 @@ module.exports = {
 			.url(browser.launch_url + '/admin')
 			.resizeWindow(1600, 900)
 			.waitForElementPresent('body', MAX_WAITING_TIME)
-			.assert.containsText('.topbar--brand', '後台')
-			.assert.elementNotPresent('.layout--mask')
-			.assert.hidden('.layout-sidenav--menu');
+			.assert.containsText('.topbar__brand', '後台')
+			.assert.elementNotPresent('.layout__mask')
+			.assert.hidden('.layout-sidenav__menu');
 	},
 
 	'Mobile Layout': function(browser) {
@@ -17,12 +17,12 @@ module.exports = {
 			.url(browser.launch_url + '/admin')
 			.resizeWindow(640, 480)
 			.waitForElementPresent('body', MAX_WAITING_TIME)
-			.assert.elementNotPresent('.layout--mask')
-			.assert.elementPresent('.layout-sidenav--menu')
+			.assert.elementNotPresent('.layout__mask')
+			.assert.elementPresent('.layout-sidenav__menu')
 			.assert.hidden('.layout-sidenav')
-			.click('.layout-sidenav--menu')
-			.waitForElementVisible('.layout--mask', MAX_WAITING_TIME)
-			.waitForElementVisible('.layout-sidenav--menu', MAX_WAITING_TIME);
+			.click('.layout-sidenav__menu')
+			.waitForElementVisible('.layout__mask', MAX_WAITING_TIME)
+			.waitForElementVisible('.layout-sidenav__menu', MAX_WAITING_TIME);
 	},
 
 	after: function(browser) {
