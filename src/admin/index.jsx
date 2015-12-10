@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { Component, PropTypes }  from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute} from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import Layout from './partials/Layout.jsx';
+import '../../style//admin/amazeui.scss';
 
-class Admin extends React.Component {
+const LINKS = [
+	{ url: '/admin/items', text: '物品管理' },
+	{ url: '/admin/users', text: '使用者管理' },
+	{ url: '/admin/exchange', text: '交易管理' },
+	{ url: '/admin/exceptions', text: '錯誤清單' },	
+];
+class Admin extends Component {
 	
 	constructor(props, context) {
 		super(props, context);
-	}	
+	}
+
+	getChildContext() {
+		return {
+			history: this.props.history,
+		};
+	}
 
 	render() {
 		return (
-			<Layout>
+			<Layout 
+				pathname={this.props.location.pathname}
+				navItems={LINKS}
+			>
 				{this.props.children}
 			</Layout>
 		);
 	}
 }
+
+Admin.childContextTypes = {
+	history: PropTypes.func,
+};
 
 import Overview from './views/Overview.jsx';
 
