@@ -92,7 +92,7 @@ class Layout extends Component {
 	renderTopbar() {
 		return (
 			<Topbar toggleNavKey="nav" fluid fixedTop>
-				<div className="am-topbar-brand">
+				<div className="am-topbar-brand brand">
 					<button
 						className="layout-sidenav--menu"
 						onClick={this.openNav.bind(this)}
