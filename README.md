@@ -12,6 +12,8 @@ $ npm install
 ```bash
 $ npm start
 ```
+The server url is [http://localhost:3000] (http://localhost:3000)
+後台網址為 [http://localhost:3000/admin] (http://localhost:3000/admin)
 
 ### E2E Testing
 ```bash
