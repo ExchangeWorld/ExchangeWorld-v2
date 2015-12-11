@@ -4,7 +4,7 @@
   "description": "ExchangeWorld V2",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf dist", 
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.build.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js",
