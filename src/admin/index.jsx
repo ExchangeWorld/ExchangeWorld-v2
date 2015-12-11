@@ -36,16 +36,18 @@ class Admin extends Component {
 }
 
 Admin.childContextTypes = {
-	history: PropTypes.func,
+	history: PropTypes.object,
 };
 
 import Overview from './views/Overview.jsx';
+import Items from './views/Items/List.jsx';
 
 ReactDOM.render(
 	(
 		<Router history={createBrowserHistory({queryKey: false})}>
 			<Route path="/admin" component={Admin}>
 				<IndexRoute component={Overview} />
+				<Route path="items" component={Items} />
 			</Route>
 	  	</Router>
 	),
