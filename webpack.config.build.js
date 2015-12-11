@@ -29,6 +29,11 @@ const config = {
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production')
 			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compressor: {
+				warnings: false
+			}
 		})
 	],
 	module: {
@@ -46,11 +51,11 @@ const config = {
 			}, 
 			{ 
 				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-				loader: "url-loader?limit=10000&mimetype=application/font-woff" 
+				loader: "url-loader?limit=10000&mimetype=application/font-woff&name=[name].[ext]" 
 			},
 			{ 
 				test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-				loader: "file-loader" 
+				loader: "file-loader&name=[name].[ext]" 
 			}
 		],
 		noParse: [],
@@ -58,9 +63,9 @@ const config = {
 };
 
 deps.forEach(function (dep) {
-  var depPath = path.resolve(nodeModules, dep);
-  config.resolve.alias[dep.split(path.sep)[0]] = depPath;
-  config.module.noParse.push(depPath);
+	var depPath = path.resolve(nodeModules, dep);
+	config.resolve.alias[dep.split(path.sep)[0]] = depPath;
+	config.module.noParse.push(depPath);
 });
 
 
