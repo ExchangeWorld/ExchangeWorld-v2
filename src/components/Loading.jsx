@@ -6,7 +6,7 @@ export default class Loading extends React.Component {
 	render() {
 		const {children, className, ...props} = this.props;
 		return (
-			<div className={`sk-fading-circle ${className || ''}`} {...props}>
+			<div className={`sk-fading-circle${ ' ' + className || ''}`} {...props}>
 				<div className="sk-circle1 sk-circle"></div>
 				<div className="sk-circle2 sk-circle"></div>
 				<div className="sk-circle3 sk-circle"></div>

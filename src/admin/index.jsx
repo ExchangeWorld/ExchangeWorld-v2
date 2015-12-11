@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component, PropTypes }  from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute} from 'react-router';
