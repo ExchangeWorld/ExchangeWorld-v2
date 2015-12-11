@@ -2,8 +2,8 @@
 
 import React, { PropTypes } from 'react';
 import { assign, forEach, isBoolean } from 'lodash';
-
 import { Table, UCheck, } from 'amazeui-react';
+import TableItem from './TableItem.jsx';
 
 const styles = {
 	tr: {
@@ -13,7 +13,7 @@ const styles = {
 	},
 };
 
-class Table extends React.Component {
+class TableV extends React.Component {
 
 	constructor(props, context) {
 		super(props, context);
@@ -155,7 +155,7 @@ class Table extends React.Component {
 	}
 }
 
-Table.propTypes = {
+TableV.propTypes = {
 	headers: PropTypes.arrayOf(PropTypes.shape({
 		title: PropTypes.oneOfType([
 			PropTypes.string,
@@ -174,7 +174,7 @@ Table.propTypes = {
 	responsive: PropTypes.bool,
 };
 
-Table.defaultProps = {
+TableV.defaultProps = {
 	children: [],
 	selectable: false,
 	bordered: false,
@@ -185,4 +185,6 @@ Table.defaultProps = {
 	responsive: false,
 };
 
-export default TableV2;
+TableV.Item = TableItem;
+
+export default TableV;
