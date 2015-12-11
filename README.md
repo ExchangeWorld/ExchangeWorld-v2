@@ -26,8 +26,17 @@ $ npm build
 ```
 ---
 
+E2E Testing
+------------
+* Use [Nightwatch](http://nightwatchjs.org)
+* 複合元件發Pull Request前，請記得要寫測試，不然一律__退回__
+* 測試會在 [TravisCI](https://travis-ci.com) 自動進行，在通過前不會Merge
+
+---
+
 Coding Style
 -----------
+* Run `npm eslint` to check coding style.
 * [Using ES6 as best as you can.](https://github.com/airbnb/javascript)
 * Use class extends React.Component unless you have a very good reason to __use mixins__.
 
@@ -44,9 +53,9 @@ Coding Style
 	  render() {
 	    return <div />;
 	  }
-	}	
+	}
+	
 	```
-
 * Variable Naming
 	
 	```javascript
@@ -114,7 +123,6 @@ Coding Style
       return <MyComponent>{body}</MyComponent>;
     }
     ```
-
 * Always self-close tags that have no children.
 
 	```javascript
