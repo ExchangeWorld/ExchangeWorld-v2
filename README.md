@@ -24,7 +24,7 @@ $ npm test
 
 ### Build
 ```bash
-$ npm build
+$ npm run build
 ```
 ---
 

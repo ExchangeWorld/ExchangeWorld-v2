@@ -8,7 +8,7 @@ const deps = [
 ];
 
 const config = {
-	devtool: 'source-map',
+	devtool: 'cheap-module-eval-source-map',
 	entry: {
 		app: [
 			'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
