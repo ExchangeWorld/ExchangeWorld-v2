@@ -4,6 +4,8 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { API } from '../../../utils/';
 import { Table } from '../../../components/';
+import Switch from '../../../components/Switch.jsx';
+import Card from '../../../components/Card.jsx';
 
 class ItemsFilter extends React.Component {
 
@@ -19,7 +21,13 @@ class ItemsFilter extends React.Component {
 
 class ItemsTable extends React.Component {
 	render() {
+		return (
+			<div>
+				<Switch />
+				<Switch checked/>
 
+			</div>
+		);
 	}
 }
 
@@ -49,7 +57,7 @@ export default class ItemList extends React.Component {
 		return (
 			<div>
 				<ItemsFilter />
-
+				<ItemsTable />
 
 			</div>
 		);

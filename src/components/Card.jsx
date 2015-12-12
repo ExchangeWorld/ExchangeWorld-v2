@@ -3,7 +3,7 @@
 import React, {PropTypes} from 'react';
 import cx from 'classnames';
 import { includes } from 'lodash'; 
-import '../style/admin/Card.scss';
+import '../../style/admin/Card.scss';
 
 const CARD_COMPONENTS = [
 	'CardAction',
@@ -27,14 +27,11 @@ class CardAction extends React.Component {
 	}
 
 	render() {
-		const {style, children, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
+		const {style, children, className, ...props} = this.props;
 
 		return (
 			<div
-				className={`${this.getClasses()}${className}`}
+				className={`${this.getClasses()} ${className}`}
 				style={style}
 				{...props}
 			>
@@ -61,14 +58,11 @@ class CardMedia extends React.Component {
 	}
 
 	render() {
-		const {style, children, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
+		const {style, children, className, ...props} = this.props;
 
 		return (
 			<div
-				className={`card__actions${className}`}
+				className={`card__actions ${className}`}
 				style={style}
 				{...props}
 			>
@@ -92,14 +86,11 @@ class CardMenu extends React.Component {
 	}
 
 	render() {
-		const {style, children, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
+		const {style, children, className, ...props} = this.props;
 
 		return (
 			<div
-				className={`card__menu${className}`}
+				className={`card__menu ${className}`}
 				style={style}
 				{...props}
 			>
@@ -124,14 +115,10 @@ class CardSupportingText extends React.Component {
 	}
 
 	render() {
-		const {style, children, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
-
+		const {style, children, className, ...props} = this.props;
 		return (
 			<div
-				className={`card__supporting-text${className}`}
+				className={`card__supporting-text ${className}`}
 				style={style}
 				{...props}
 			>
@@ -166,14 +153,10 @@ class CardTitle extends React.Component {
 	}
 
 	render() {
-		const {style, children, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
-
+		const {style, children, className, ...props} = this.props;
 		return (
 			<div
-				className={`${this.getClassName()}${className}`}
+				className={`${this.getClassName()} ${className}`}
 				style={style}
 				{...props}
 			>
@@ -223,15 +206,12 @@ class Card extends React.Component {
 	}
 
 	render() {
-		const {children, style, ...props} = this.props;
-		const className = typeof(this.props.className) === 'string'
-			? ` ${this.props.className}`
-			: '';
+		const {children, style, className, ...props} = this.props;
 
 		return (
 			<div 
 				style={style} 
-				className={`${this.getClassName()}${className}`}
+				className={`${this.getClassName()} ${className}`}
 			>
 				{children}
 			</div>
