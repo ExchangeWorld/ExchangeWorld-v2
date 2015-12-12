@@ -25,7 +25,6 @@ class ItemsTable extends React.Component {
 			<div>
 				<Switch />
 				<Switch checked/>
-
 			</div>
 		);
 	}
